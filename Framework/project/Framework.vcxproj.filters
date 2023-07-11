@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\App">
+      <UniqueIdentifier>{69ac40a6-7e6e-4e7d-86c6-3c277daf3806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ComPtr">
+      <UniqueIdentifier>{89cd2b29-5df5-422e-8d58-c6a7413b6d2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\FileUtil">
+      <UniqueIdentifier>{04b50300-3c97-4f6d-b3f3-015b198f11ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\InlineUtil">
+      <UniqueIdentifier>{d6feb77c-3f8a-4a53-b021-fc00f715130b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Logger">
+      <UniqueIdentifier>{f949bf7e-24af-4fb9-8800-bc31ad772cbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D">
+      <UniqueIdentifier>{35a8954f-8f11-499b-b2f1-dbec0bf34ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\RootSignature">
+      <UniqueIdentifier>{51113cf0-3566-46e2-8cca-201bff0fdd64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\Pool">
+      <UniqueIdentifier>{fc2452c4-5dc6-4381-a6f7-f0f2b0cd055c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource">
+      <UniqueIdentifier>{630dc5e3-8290-448f-b69c-bb792ad15f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource\Texture">
+      <UniqueIdentifier>{4e9b9457-1f60-4359-9712-64f4d18f26f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource\VertexBuffer">
+      <UniqueIdentifier>{7dff0a68-cce9-454e-af84-6d9649780309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource\Mesh">
+      <UniqueIdentifier>{3042e666-59a2-4d6b-ae50-b2024ac148f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource\Material">
+      <UniqueIdentifier>{21a85e08-8a4d-4132-88db-16ceebfe548a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\DescriptorPool">
+      <UniqueIdentifier>{88976ab3-f988-4644-b9d6-10491efae7c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\Fence">
+      <UniqueIdentifier>{c4739883-bc24-4697-a436-d4826752d6dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\DepthTarget">
+      <UniqueIdentifier>{57a15fe7-5c92-4c18-920d-fb8ad2949042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\ColorTarget">
+      <UniqueIdentifier>{643f43af-0823-46ba-b21b-0dd92b47c774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\D3D\CommandList">
+      <UniqueIdentifier>{d9c7fc4f-0c59-4e2d-a20a-c1d744efd3a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource\ConstantBuffer">
+      <UniqueIdentifier>{52a515b0-bd2e-4564-babf-fbe8441c11df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Resource\IndexBuffer">
+      <UniqueIdentifier>{e91aab7a-5bb0-4e52-b52a-271a3c43d24f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Bump">
+      <UniqueIdentifier>{d8b8796a-3d11-4500-9e43-0c9ac9673fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\CookTorrance">
+      <UniqueIdentifier>{52c9b085-6510-449e-b664-3de0151fa6ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\GGX">
+      <UniqueIdentifier>{85cef9f0-38e4-4044-bd68-e096aee09d45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Lambert">
+      <UniqueIdentifier>{8531f7e3-5c06-46bd-b587-9487a441f58f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Phong">
+      <UniqueIdentifier>{05b5dfa5-41f3-4e6c-a327-3f4482e4fae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PointLight">
+      <UniqueIdentifier>{21494042-2665-457a-b0f4-755a5fa6adf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Simple">
+      <UniqueIdentifier>{fc68a7f0-29d6-4b8c-96af-820d98c0de95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\SimpleTex">
+      <UniqueIdentifier>{906bfbe2-2484-4eff-9ec3-cf3f2a3f8042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Tonemap">
+      <UniqueIdentifier>{d2f49275-0fda-49a4-9f8d-260e7c8b9448}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\Resource\BRDF.hlsli">
+      <Filter>リソース ファイル</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\App.h">
+      <Filter>ソース ファイル\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ColorTarget.h">
+      <Filter>ソース ファイル\D3D\ColorTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CommandList.h">
+      <Filter>ソース ファイル\D3D\CommandList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ComPtr.h">
+      <Filter>ソース ファイル\ComPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ConstantBuffer.h">
+      <Filter>ソース ファイル\Resource\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DepthTarget.h">
+      <Filter>ソース ファイル\D3D\DepthTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DescriptorPool.h">
+      <Filter>ソース ファイル\D3D\DescriptorPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Fence.h">
+      <Filter>ソース ファイル\D3D\Fence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FileUtil.h">
+      <Filter>ソース ファイル\FileUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IndexBuffer.h">
+      <Filter>ソース ファイル\Resource\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\InlineUtil.h">
+      <Filter>ソース ファイル\InlineUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Logger.h">
+      <Filter>ソース ファイル\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Material.h">
+      <Filter>ソース ファイル\Resource\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Mesh.h">
+      <Filter>ソース ファイル\Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Pool.h">
+      <Filter>ソース ファイル\D3D\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RootSignature.h">
+      <Filter>ソース ファイル\D3D\RootSignature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResMesh.h">
+      <Filter>ソース ファイル\Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Texture.h">
+      <Filter>ソース ファイル\Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\VertexBuffer.h">
+      <Filter>ソース ファイル\Resource\VertexBuffer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ColorTarget.cpp">
+      <Filter>ソース ファイル\D3D\ColorTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CommandList.cpp">
+      <Filter>ソース ファイル\D3D\CommandList</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConstantBuffer.cpp">
+      <Filter>ソース ファイル\Resource\ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DepthTarget.cpp">
+      <Filter>ソース ファイル\D3D\DepthTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DescriptorPool.cpp">
+      <Filter>ソース ファイル\D3D\DescriptorPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Fence.cpp">
+      <Filter>ソース ファイル\D3D\Fence</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FileUtil.cpp">
+      <Filter>ソース ファイル\FileUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IndexBuffer.cpp">
+      <Filter>ソース ファイル\Resource\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Logger.cpp">
+      <Filter>ソース ファイル\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Material.cpp">
+      <Filter>ソース ファイル\Resource\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mesh.cpp">
+      <Filter>ソース ファイル\Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RootSignature.cpp">
+      <Filter>ソース ファイル\D3D\RootSignature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ResMesh.cpp">
+      <Filter>ソース ファイル\Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Texture.cpp">
+      <Filter>ソース ファイル\Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VertexBuffer.cpp">
+      <Filter>ソース ファイル\Resource\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\App.cpp">
+      <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Resource\BasicVS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\BumpPS.hlsl">
+      <Filter>リソース ファイル\Bump</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\BumpVS.hlsl">
+      <Filter>リソース ファイル\Bump</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\CookTorrancePS.hlsl">
+      <Filter>リソース ファイル\CookTorrance</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\CookTorranceVS.hlsl">
+      <Filter>リソース ファイル\CookTorrance</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\GGXPS.hlsl">
+      <Filter>リソース ファイル\GGX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\GGXVS.hlsl">
+      <Filter>リソース ファイル\GGX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\LambertPS.hlsl">
+      <Filter>リソース ファイル\Lambert</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\LambertVS.hlsl">
+      <Filter>リソース ファイル\Lambert</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\PhongPS.hlsl">
+      <Filter>リソース ファイル\Phong</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\PhongVS.hlsl">
+      <Filter>リソース ファイル\Phong</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\PointLightPS.hlsl">
+      <Filter>リソース ファイル\PointLight</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\SimplePS.hlsl">
+      <Filter>リソース ファイル\Simple</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\SimpleTexPS.hlsl">
+      <Filter>リソース ファイル\SimpleTex</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\SimpleTexVS.hlsl">
+      <Filter>リソース ファイル\SimpleTex</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\SimpleVS.hlsl">
+      <Filter>リソース ファイル\Simple</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\TonemapPS.hlsl">
+      <Filter>リソース ファイル\Tonemap</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\TonemapVS.hlsl">
+      <Filter>リソース ファイル\Tonemap</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
