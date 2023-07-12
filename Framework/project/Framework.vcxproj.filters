@@ -88,9 +88,6 @@
     <Filter Include="リソース ファイル\Phong">
       <UniqueIdentifier>{05b5dfa5-41f3-4e6c-a327-3f4482e4fae1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="リソース ファイル\PointLight">
-      <UniqueIdentifier>{21494042-2665-457a-b0f4-755a5fa6adf4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="リソース ファイル\Simple">
       <UniqueIdentifier>{fc68a7f0-29d6-4b8c-96af-820d98c0de95}</UniqueIdentifier>
     </Filter>
@@ -100,11 +97,17 @@
     <Filter Include="リソース ファイル\Tonemap">
       <UniqueIdentifier>{d2f49275-0fda-49a4-9f8d-260e7c8b9448}</UniqueIdentifier>
     </Filter>
+    <Filter Include="リソース ファイル\Light">
+      <UniqueIdentifier>{21494042-2665-457a-b0f4-755a5fa6adf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="..\Resource\BRDF.hlsli">
       <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="..\Resource\Header1.hlsli">
+      <Filter>ソース ファイル</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -253,9 +256,6 @@
     <FxCompile Include="..\Resource\PhongVS.hlsl">
       <Filter>リソース ファイル\Phong</Filter>
     </FxCompile>
-    <FxCompile Include="..\Resource\PointLightPS.hlsl">
-      <Filter>リソース ファイル\PointLight</Filter>
-    </FxCompile>
     <FxCompile Include="..\Resource\SimplePS.hlsl">
       <Filter>リソース ファイル\Simple</Filter>
     </FxCompile>
@@ -273,6 +273,12 @@
     </FxCompile>
     <FxCompile Include="..\Resource\TonemapVS.hlsl">
       <Filter>リソース ファイル\Tonemap</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\PointLightPS.hlsl">
+      <Filter>リソース ファイル\Light</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resource\SpotLightPS.hlsl">
+      <Filter>リソース ファイル\Light</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

@@ -68,8 +68,16 @@ namespace
 	{
 		Vector3 LightPosition;     // ライト位置
 		float   LightInvSqrRadius; // ライトの逆2乗半径
+
 		Vector3 LightColor;        // ライトカラー
-		float  LightIntensity;     // ライト強度
+		float   LightIntensity;    // ライト強度
+
+		Vector3 LightForward;      // ライトの照射方向
+		float   LightAngleScale;   // 1.0f / (cosInner - cosOuter)
+
+		float   LightAngleOffset;  // -cosOuter * LightAngleScale
+		int     LightType;         // ライトタイプ
+		float   Padding[2];        // パディング
 	};
 
 	// カメラ用のコンスタントバッファーの構造体
@@ -104,13 +112,50 @@ namespace
 	/// <param name="color">ライトカラー</param>
 	/// <param name="intensity">ライト強度</param>
 	/// <returns>ポイントパラメーター</returns>
-	CbLight CalcPointLight(const Vector3& pos, float radius, const Vector3& color, float intensity)
+	CbLight ComputePointLight(const Vector3& pos, float radius, const Vector3& color, float intensity)
 	{
 		CbLight result;
 		result.LightPosition     = pos;
 		result.LightInvSqrRadius = 1.0f / (radius * radius);
 		result.LightColor        = color;
 		result.LightIntensity    = intensity;
+
+		return result;
+	}
+
+	/// <summary>
+	/// スポットライトパラメータの計算
+	/// </summary>
+	/// <param name="lightType"></param>
+	/// <param name="dir"></param>
+	/// <param name="pos"></param>
+	/// <param name="radius"></param>
+	/// <param name="color"></param>
+	/// <param name="intensity"></param>
+	/// <param name="innerAngle"></param>
+	/// <param name="outerAngle"></param>
+	/// <returns></returns>
+	CbLight ComputeSpotLight(int            lightType,
+		                     const Vector3& dir,
+		                     const Vector3& pos,
+		                     float          radius,
+		                     const Vector3& color,
+		                     float          intensity,
+		                     float          innerAngle,
+		                     float          outerAngle)
+	{
+		auto conInnerAngle = cos(innerAngle);
+		auto cosOuterAngle = cos(outerAngle);
+
+		CbLight result;
+		result.LightPosition     = pos;
+		result.LightInvSqrRadius = 1.0f / (radius * radius);
+		result.LightColor        = color;
+		result.LightIntensity    = intensity;
+		result.LightForward      = dir;
+		result.LightAngleScale   = 1.0f / DirectX::XMMax(0.001f, (conInnerAngle - cosOuterAngle));
+		result.LightAngleOffset  = -cosOuterAngle * result.LightAngleScale;
+		result.LightType         = lightType;
 
 		return result;
 	}
@@ -850,7 +895,7 @@ void App::App::ChangeDisplayMode(bool hdr)
 
 void App::App::DrawScene(ID3D12GraphicsCommandList* pCmdList)
 {
-	auto cameraPos = Vector3(-4.0f, 1.0f, 2.5f);
+	auto cameraPos = Vector3(1.0f, 0.5f, 3.0f);
 
 	auto currTime = std::chrono::system_clock::now();
 	auto dt = float(std::chrono::duration_cast<std::chrono::milliseconds>(currTime - m_StartTime).count()) / 1000.0f;
@@ -858,13 +903,19 @@ void App::App::DrawScene(ID3D12GraphicsCommandList* pCmdList)
 
 	// ライトバッファの更新
 	{
-		auto matrix = Matrix::CreateRotationY(m_RotateAngle);
-		auto pos = Vector3::Transform(Vector3(0.0f, 0.25f, 0.75f), matrix);
+		auto pos = Vector3(-1.5f,  0.0f,  1.5f);
+		auto dir = Vector3( 1.0f, -0.1f, -1.0f);
+		dir.Normalize();
 
 		auto ptr = m_LightCB[m_FrameIndex].GetPtr<CbLight>();
-		*ptr = CalcPointLight(pos, 2.0f, lightColor, 100.0f);
-
-		m_RotateAngle += 0.0025f;
+		*ptr = ComputeSpotLight(m_LightType,
+			                    dir,
+			                    pos,
+			                    3.0f,
+			                    lightColor,
+			                    810.0f,
+			                    DirectX::XMConvertToRadians(5.0f),
+			                    DirectX::XMConvertToRadians(20.0f));
 	}
 
 	// カメラバッファの更新
@@ -1149,7 +1200,7 @@ bool App::App::OnInit()
 			}
 
 			auto ptr = m_LightCB[i].GetPtr<CbLight>();
-			*ptr = CalcPointLight(Vector3(0.0f, 1.0f, 1.5f), 1.0f, Vector3(1.0f, 0.5f, 0.0f), 10.0f);
+			*ptr = ComputePointLight(Vector3(0.0f, 1.0f, 1.5f), 1.0f, Vector3(1.0f, 0.5f, 0.0f), 10.0f);
 		}
 	}
 

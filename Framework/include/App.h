@@ -191,10 +191,10 @@ namespace App
 		float m_MaxLuminance;  // ディスプレイの最大輝度値
 		float m_MinLuminance;  // ディスプレイの最小輝度値
 		float m_BaseLuminance; // 基準輝度値
-		//float m_MaxLuminance;  // 最大輝度値
 		float m_Exposure;      // 露光値
 		int   m_TonemapType;   // トーンマップタイプ
 		int   m_ColorSpace;    // 出力色空間
+		int   m_LightType;     // ライトタイプ
 
 
 		std::chrono::system_clock::time_point m_StartTime;    // 開始時刻
