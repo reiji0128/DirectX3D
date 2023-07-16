@@ -1,9 +1,13 @@
 #pragma once
 #include <d3d12.h>
 #include <DirectXMath.h>
-#include <assimp/scene.h>
 #include <string>
 #include <vector>
+
+struct aiMesh;
+struct aiMaterial;
+struct aiScene;
+struct aiString;
 
 namespace Resource
 {

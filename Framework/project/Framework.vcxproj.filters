@@ -280,5 +280,8 @@
     <FxCompile Include="..\Resource\SpotLightPS.hlsl">
       <Filter>リソース ファイル\Light</Filter>
     </FxCompile>
+    <FxCompile Include="..\Resource\DirectionalLightPS.hlsl">
+      <Filter>リソース ファイル\Light</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
