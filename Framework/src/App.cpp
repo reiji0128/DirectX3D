@@ -6,9 +6,10 @@
 #include "DirectXHelpers.h"
 #include <stdio.h>
 #include <SimpleMath.h>
-
 #include <io.h>
 #include <fcntl.h>
+#include <imgui/imgui_impl_win32.h>
+
 
 using namespace DirectX::SimpleMath;
 
@@ -236,6 +237,9 @@ bool App::App::InitApp()
 	{
 		return false;
 	}
+
+	m_ImguiRender = Render::ImguiRender();
+	m_ImguiRender.Init(m_pDevice.Get(),m_hWnd);
 
 	// ウィンドウを表示.
 	ShowWindow(m_hWnd, SW_SHOWNORMAL);
@@ -683,6 +687,9 @@ void App::App::Render()
 			                        D3D12_RESOURCE_STATE_PRESENT);
 	}
 
+	m_ImguiRender.Begin();
+	m_ImguiRender.Draw(pCmd);
+
 	// コマンドの記録を終了.
 	pCmd->Close();
 
@@ -1095,7 +1102,7 @@ bool App::App::OnInit()
 		std::wstring path;
 
 		// ファイルパスを検索
-		if (!SearchFilePath(L"Resource/material_test/material_test.obj", path))
+		if (!SearchFilePath(L"Resource/teapot/teapot.obj", path))
 		{
 			ELOG("Error : File Not Found.");
 			return false;
@@ -1666,6 +1673,8 @@ LRESULT App::App::WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 	{
 		instance->MsgProc(hWnd, msg, wp, lp);
 	}
+
+	Render::ImguiRender::ImGuiWinProcHandler(hWnd, msg, wp, lp);
 
 	return DefWindowProc(hWnd, msg, wp, lp);
 }

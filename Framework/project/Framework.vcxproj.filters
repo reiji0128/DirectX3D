@@ -100,14 +100,17 @@
     <Filter Include="リソース ファイル\Light">
       <UniqueIdentifier>{21494042-2665-457a-b0f4-755a5fa6adf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{776a9628-4ea5-4fc4-b74a-7a3a120ca5ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ImguiRender">
+      <UniqueIdentifier>{897351e9-51a5-449b-aade-73307e9cf0ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="..\Resource\BRDF.hlsli">
       <Filter>リソース ファイル</Filter>
-    </None>
-    <None Include="..\Resource\Header1.hlsli">
-      <Filter>ソース ファイル</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +171,33 @@
     <ClInclude Include="..\include\VertexBuffer.h">
       <Filter>ソース ファイル\Resource\VertexBuffer</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui_impl_dx12.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ImguiRender.h">
+      <Filter>ソース ファイル\ImguiRender</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -220,6 +250,30 @@
     </ClCompile>
     <ClCompile Include="..\src\App.cpp">
       <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_impl_dx12.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImguiRender.cpp">
+      <Filter>ソース ファイル\ImguiRender</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

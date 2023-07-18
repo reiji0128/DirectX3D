@@ -17,6 +17,7 @@
 #include "InlineUtil.h"
 #include "ConstantBuffer.h"
 #include "Material.h"
+#include "ImguiRender.h"
 
 #pragma comment(lib, "d3d12.lib")
 #pragma comment(lib, "dxgi.lib")
@@ -196,6 +197,7 @@ namespace App
 		int   m_ColorSpace;    // 出力色空間
 		int   m_LightType;     // ライトタイプ
 
+		Render::ImguiRender m_ImguiRender;
 
 		std::chrono::system_clock::time_point m_StartTime;    // 開始時刻
 	};
